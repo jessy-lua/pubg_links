@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>PLAYERUNKNOWN'S BATTLEGROUNDS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            var globalScope = null;
+            var broConfiguration =
+                /*BEGIN BROCONF*/{
+  "replaced": false,
+  "credential": {
+    "bro": "provider={provider}&id={id}&password={password}&playerNetId={playerNetId}&cc={cc}&timezoneOffset={timezoneOffset}&clientGameVersion={clientGameVersion}&fullClientGameVersion={fullClientGameVersion}&antiCheatSolution={antiCheatSolution}&osLanguage={osLanguage}",
+    "outer": "provider=outer&source={source}&id={id}&token={password}&playerNetId={playerNetId}&cc={cc}&timezoneOffset={timezoneOffset}&clientGameVersion={clientGameVersion}&fullClientGameVersion={fullClientGameVersion}&antiCheatSolution={antiCheatSolution}&osLanguage={osLanguage}",
+    "steam": "provider={provider}&ticket={ticket}&playerNetId={playerNetId}&cc={cc}&clientGameVersion={clientGameVersion}"
+  },
+  "releaseVersion": "pc-27.1",
+  "buildNumber": "261",
+  "versionInfo": {
+    "COMMIT": "2923d0292788",
+    "BUILD_NUMBER": "261",
+    "BRANCH": "release-27.1",
+    "BUILD": "release-27.1-261"
+  },
+  "trackerSampleRate": "0.0003",
+  "authdata": null,
+  "gate": "http://{@gate}/index.html",
+  "uri": "https://prod-live-cfentry.playbattlegrounds.com/userproxy",
+  "entry": "ws://{@userproxy_elb}:81/userproxy",
+  "secureEntry": "wss://prod-live-cfentry.playbattlegrounds.com/userproxy",
+  "useSecure": true,
+  "verreq": "27.1.2",
+  "LayoutMode": "",
+  "LanpartyHome": "http://52.59.158.42/Dreamhack/Game/{accountId}/day1_qualifying/1",
+  "useImageServer": true,
+  "imageServerUrl": "https://prod-live-images.playbattlegrounds.com",
+  "imageReleaseDate": ""
+};/*END BROCONF*/
+
+            var production = false;
+        </script>
+        <script src="coherent/coherent.js"></script>
+        <style id="fontStyle"></style>
+    <link rel="stylesheet" href="styles.5e78f7d304ae9ddb.css"></head>
+
+    <body oncontextmenu="return false;">
+        <div id="pubg-splash-bg" class="pubg-splash-bg">
+            <h3 class="logo">BATTLEGROUNDS</h3>
+        </div>
+        <app>
+            <section class="wrapper pubg-splash">
+                <div class="connect">
+                    <span class="spinner"></span>
+                    <p class="">INITIALIZING...</p>
+                </div>
+            </section>
+        </app>
+        <outer-app></outer-app>
+    <script src="runtime.54519a66438bac60.js" type="module"></script><script src="polyfills.1932b62e15981113.js" type="module"></script><script src="main.1b6c7032b686a2a9.js" type="module"></script></body>
+    <script>
+        document.body.classList.add("default-bg");
+        var ua = navigator.userAgent;
+        if (ua.lastIndexOf("Chrome/") > 0) {
+            var version = ua.split("Chrome/")[1].split(".")[0];
+            if (version >= 53) {
+                console.log(ua, version);
+                _dev = true;
+                document.body.classList.add("chrome");
+            }
+        }
+        if (!ua.includes("Coherent")) {
+            document.body.classList.add("in-browser");
+        }
+    </script>
+</html>
+
